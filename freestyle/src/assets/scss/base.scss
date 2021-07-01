@@ -1,0 +1,50 @@
+
+html,body,#app{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font: 16px "microsoft yahei", Arial, Helvetica, sans-serif;
+  color: black;
+ }
+ ul,li,p,h1,h2,h3,h4,h5,h6,dl,dt,dd{
+   margin: 0;
+   padding: 0;
+   border: none;
+ }
+ a{
+   text-decoration: none;
+   text-shadow: none;
+   font-family: "微软雅黑";
+   color: #000;
+ }
+ ul{
+   list-style: none;
+ }
+ textarea,input{
+   outline: none;
+   -webkit-appearance: none;
+   font-family: "微软雅黑";
+ }
+ .fl{
+   float: left;
+ }
+ .fr{
+   float: right;
+ }
+ img{
+   border: none;
+ }
+ .clear{
+   clear: both;
+   height: 0;
+   overflow: hidden;
+ }
+ .font-color-w{
+   color: white;
+ }
+ .font-color-g{
+   color: #a0a0a0;
+ }
