@@ -3,6 +3,7 @@ package com.example.blogBase.model;
 import com.example.blogBase.em.ExceptionEnum;
 import lombok.Data;
 
+
 @Data
 public class BusinessException extends RuntimeException{
     //  返回给前端的  异常错误码   可乱编

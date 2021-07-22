@@ -2,10 +2,14 @@ package com.example.webblog.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class Blog {
+public class Blog implements Serializable {
+
+    private static final long serialVersionUID = 594192936L;
+
     // 文章id
     private int blogId;
     // 文章主题

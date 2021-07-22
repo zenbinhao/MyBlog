@@ -3,11 +3,13 @@ package com.example.webblog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.blogBase.model.BaseModel;
 import com.example.blogBase.model.BusinessException;
+//import com.example.blogBase.util.RedisUtil;
 import com.example.webblog.entity.Blog;
 import com.example.webblog.mapper.BlogMapper;
 import com.example.webblog.service.BlogService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -17,7 +19,11 @@ import java.util.List;
 public class BlogServiceImpl implements BlogService {
 
     @Autowired
+    @Qualifier("blogMapper")
     BlogMapper blogMapper;
+
+//    @Autowired
+//    RedisUtil redisUtil;
 
     @Override
     public BaseModel<Blog> addBlog(Blog blog,BaseModel<Blog> baseModel) throws Exception {
@@ -57,6 +63,12 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public BaseModel<List<Blog>> selectAll(BaseModel baseModel) throws Exception {
+        String key = "blogList";
+/*        Boolean hasKey = redisUtil.hasKey(key);
+        if(hasKey){
+
+        }*/
+
         QueryWrapper<Blog> queryWrapper = new QueryWrapper();
         queryWrapper.eq("is_delete",0);
         List<Blog> list = blogMapper.selectList(queryWrapper);

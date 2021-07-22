@@ -5,6 +5,7 @@ spring:
     username: root
     password: 666666
 
+
 server:
   port: 8088
   servlet:
